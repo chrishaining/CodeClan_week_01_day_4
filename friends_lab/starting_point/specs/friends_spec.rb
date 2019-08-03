@@ -87,7 +87,6 @@ class TestFriends < MiniTest::Test
     assert_equal(true, likes_to_eat(@person2, "soup"))
   end
 
-  #I am having trouble with the additional tests for Q3 - it doesn't work for false or people who like multiple snacks
   def test_likes_to_eat_false
     assert_equal(false, likes_to_eat(@person3, "spinach"))
   end
@@ -104,7 +103,6 @@ class TestFriends < MiniTest::Test
   # 5. For a given person, remove a specific name from their list of friends
   # (hint: Same as above, testing for the length of the array should be sufficient)
 
-  #I can't see why this the actual number is 6, when I'm expecting 3.
   def test_removes_friend
     removes_friend(@person1, "Scooby")
     assert_equal(3, @person1[:friends].length)
